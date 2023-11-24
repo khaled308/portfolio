@@ -13,6 +13,7 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -55,6 +56,10 @@ a {
   text-align: center;
 }
 
+.section-heading {
+  font-size: 4rem;
+}
+
 .container {
   max-width: 800px;
   margin: 0 auto;
@@ -85,7 +90,7 @@ nav .container {
   align-items: center;
 }
 
-nav .logo {
+.logo {
   font-size: 2.5rem;
   font-weight: 600;
   color: var(--6030b1);
@@ -172,10 +177,6 @@ nav .links li .contact:hover {
   transform: scale(1.5) translateY(20%);
 }
 
-.about__info h1 {
-  font-size: 4rem;
-}
-
 .about__info p {
   font-size: 2rem;
 }
@@ -247,3 +248,119 @@ nav .links li .contact:hover {
   transform: scale(0.9);
 }
 /* end skills */
+
+/* start projects */
+.projects {
+  padding: 2rem 0;
+}
+
+.projects__list {
+  padding: 2rem 0;
+}
+
+.projects__list li {
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+.projects__list img {
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+.project-img-wrapper {
+  box-shadow: 0 20px 80px rgba(0, 0, 0, 0.45);
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+.project-img-wrapper:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #1c1d25;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 1;
+}
+
+.projects__list li:hover .project-img-wrapper:before {
+  opacity: 0.7;
+}
+
+.projects__list li:hover img {
+  transform: scale(1.07);
+}
+
+.projects__list .project__info {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translateY(100%);
+  transition: all 0.3s ease-in-out;
+  z-index: 2;
+  max-width: 550px;
+  opacity: 0;
+}
+
+.projects__list li:hover .project__info {
+  opacity: 1;
+  transform: translateY(-50%);
+}
+
+.project__info-title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.project__info-para {
+  font-size: 1.6rem;
+  margin: 1rem 0;
+}
+
+.project__info-links a {
+  font-size: 2rem;
+  padding-right: 1rem;
+}
+
+.project__info-title,
+.project__info-subtitle,
+.project__info-para {
+  text-align: left;
+  color: #fff;
+}
+/* end projects */
+
+/* start footer */
+footer {
+  background-color: #242424;
+  padding: 5rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.footer .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.footer__links a {
+  color: #fff;
+  font-size: 1.8rem;
+}
+/* end footer */
