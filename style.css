@@ -102,6 +102,41 @@ a {
   }
 }
 
+@keyframes animate-profile-img {
+  0% {
+    transform: scale(0);
+  }
+
+  80% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
 /* start nav */
 nav {
   height: 100px;
@@ -189,6 +224,7 @@ nav .links li .contact:hover {
   border-radius: 50%;
   overflow: hidden;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  animation: animate-profile-img 1s 200ms backwards;
 }
 
 .about__info .about__img-container img {
@@ -198,8 +234,17 @@ nav .links li .contact:hover {
   transform: scale(1.5) translateY(20%);
 }
 
+.about__info-title {
+  animation: fade-up 1s 200ms backwards;
+}
+
 .about__info p {
   font-size: 2rem;
+  animation: fade-up 1s 300ms backwards;
+}
+
+.about__links {
+  animation: fade-up 1s 400ms backwards;
 }
 
 .about__links a {
@@ -210,6 +255,7 @@ nav .links li .contact:hover {
 .about__undraw-img-container {
   flex: 1;
   padding: 100px 0;
+  animation: fade-in 1200ms 800ms backwards;
 }
 
 .about__undraw-img-container img {
@@ -350,7 +396,8 @@ nav .links li .contact:hover {
 
 .project__info-title,
 .project__info-subtitle,
-.project__info-para {
+.project__info-para,
+.project__info-links a {
   text-align: left;
   color: #fff;
 }
